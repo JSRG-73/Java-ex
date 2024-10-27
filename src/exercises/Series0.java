@@ -9,7 +9,6 @@ public class Series0 {
 		int l;
 		int digit;
 		
-		
 		System.out.println(mainString.length());
 		
 		for(int i=0;i<iterations;i++) {
@@ -19,17 +18,10 @@ public class Series0 {
 			
 			for(int j=0;j<mainString.length();j++) {
 				
+				if (j==0) {digit=Integer.parseInt(mainString.substring(0,1));}				
 				
-				//System.out.println("\nj: "+j);
-				if (j==0) {
-					digit=Integer.parseInt(mainString.substring(0,1));
-					//System.out.println("start");
-				}				
+				if (digit==Integer.parseInt(mainString.substring(j,j+1))){l++;} 
 				
-				if (digit==Integer.parseInt(mainString.substring(j,j+1))){
-					l++;
-					//System.out.println("case2");
-				} 
 				else if(digit!=Integer.parseInt(mainString.substring(j,j+1))){
 					
 					auxString+=l;
@@ -42,16 +34,12 @@ public class Series0 {
 					auxString+=l;
 					auxString+=digit;
 				}
-				
 			}
-			
+
 			System.out.println(auxString);
 			mainString = auxString;
 			auxString="";
 			
 		}
-		
 	}
-	
-	
 }
