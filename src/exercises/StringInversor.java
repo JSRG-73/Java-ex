@@ -1,6 +1,5 @@
 package exercises;
 
-import java.io.WriteAbortedException;
 import java.util.Scanner;
 
 public class StringInversor {
