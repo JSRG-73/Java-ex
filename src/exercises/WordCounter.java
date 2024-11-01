@@ -7,16 +7,15 @@ public class WordCounter {
 		
 		Scanner inScanner = new Scanner(System.in);
 		System.out.println("Enter a sentence: ");
-		String string = inScanner.nextLine();		
-		//String string = "   Hello,   how are you?   ";
-		
+		String string = inScanner.nextLine();	
+		inScanner.close();
+
 		int spacecounter=0;
 		boolean flag = false;
 		string=string.trim();
 		
 		for(int i=0;i<string.length();i++) {
 			
-			//System.out.println(string.substring(i, i+1)+ " "+flag);
 			if(string.substring(i, i+1).equals(" ")) {
 				if(!flag) {
 					flag=true;
@@ -25,7 +24,5 @@ public class WordCounter {
 			} else {flag=false;}
 		}
 		System.out.println("Words: "+(spacecounter+1));
-		
 	}
-
 }
