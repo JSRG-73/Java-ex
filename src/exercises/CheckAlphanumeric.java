@@ -7,16 +7,14 @@ public class CheckAlphanumeric {
 	static boolean checkalpha(String s) {
 		Pattern pattern = Pattern.compile("[a-z]|[A-Z]");
 		Matcher matcher = pattern.matcher(s);
-		if(matcher.find()) return true;
-		else return false;
+		return matcher.find();
 	}
 	
 	static boolean checkvowel(String s) {
 		s=s.toLowerCase();
 		Pattern pattern = Pattern.compile("a|e|i|o|u");
 		Matcher matcher = pattern.matcher(s);
-		if(matcher.find()) return true;
-		else return false;
+		return matcher.find();
 	}
 
 	public static void main(String[] args) {
