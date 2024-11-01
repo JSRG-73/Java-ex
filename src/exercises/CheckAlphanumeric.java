@@ -19,12 +19,9 @@ public class CheckAlphanumeric {
 
 	public static void main(String[] args) {
 		
-		int consonants, vowels;
+		int consonants = 0, vowels = 0;
 		String string = "Hello World!";
 		String letter;
-		
-		vowels=0;
-		consonants=0;
 		
 		for(int i=0;i<string.length();i++) {
 			
