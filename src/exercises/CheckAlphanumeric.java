@@ -3,18 +3,45 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CheckAlphanumeric {
+	
+	static boolean checkalpha(String s) {
+		Pattern pattern = Pattern.compile("[a-z]|[A-Z]");
+		Matcher matcher = pattern.matcher(s);
+		if(matcher.find()) return true;
+		else return false;
+	}
+	
+	static boolean checkvowel(String s) {
+		s=s.toLowerCase();
+		Pattern pattern = Pattern.compile("a|e|i|o|u");
+		Matcher matcher = pattern.matcher(s);
+		if(matcher.find()) return true;
+		else return false;
+	}
 
 	public static void main(String[] args) {
 		
-		String string = "qwertyuiopasdfg";
+		int consonants, vowels;
+		String string = "Hello World!";
+		String letter;
 		
-		Pattern pattern = Pattern.compile("z");
-		Matcher matcher =pattern.matcher(string);
+		vowels=0;
+		consonants=0;
 		
-		if(matcher.find()) {
-			System.out.println("sss");
+		for(int i=0;i<string.length();i++) {
+			
+			letter=string.substring(i,i+1);
+			
+			if(checkalpha(letter)) {
+
+				if(checkvowel(letter)) vowels++;
+				else consonants++;
+				
+			}else continue;
 		}
+
+		System.out.println("Vowels: " + vowels);
+		System.out.println("Consonants: " + consonants);
 		
 	}
-
 }
