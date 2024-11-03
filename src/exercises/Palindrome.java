@@ -28,7 +28,7 @@ public class Palindrome {
 	public static void main(String[] args) {
 
 		Scanner inScanner = new Scanner(System.in);
-		String sentenceString;//"Sómos o no somos";
+		String sentenceString;
 		while(true) {
 			System.out.println("Type your String: ");
 			sentenceString = inScanner.nextLine();
