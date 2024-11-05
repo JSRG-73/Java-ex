@@ -9,8 +9,9 @@ public class MainClass {
 			//Thread thread2 = new Thread(new Process2());
 			
 			thread1.stringsetter("this is the first thread");
-			thread2.stringsetter("this is the second thread");
+			thread2.stringsetter(thread2.getName());
 			thread1.start();
+			thread1.sleep(1000);
 			thread2.start();
 		}catch (Exception e) {
 			System.out.println(e);
