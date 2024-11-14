@@ -8,7 +8,5 @@ public class Cesar {
 		for (char c= 'A'; c<='Z'; c++) {
 			
 		}
-
 	}
-
 }
