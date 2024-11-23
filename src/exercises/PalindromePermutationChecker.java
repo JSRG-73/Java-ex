@@ -15,9 +15,9 @@ public class PalindromePermutationChecker {
 			
 				for(int i=0;i<(sentenceString.length()/2);i++) {
 					if(sentenceString.substring(i,i+1).equals(sentenceString.substring(sentenceString.length()-i-1,sentenceString.length()-i))) {
-						continue; //System.out.println(true);
+						continue;
 					} else {
-						return "It's not a palindrome"; //System.out.println(false);
+						return "It's not a palindrome"; 
 					}
 				}
 			
