@@ -12,7 +12,6 @@ public class PalindromePermutationChecker {
 			sentenceString=sentenceString.replace("ú", "u");
 			sentenceString=sentenceString.toLowerCase();
 			
-			
 				for(int i=0;i<(sentenceString.length()/2);i++) {
 					if(sentenceString.substring(i,i+1).equals(sentenceString.substring(sentenceString.length()-i-1,sentenceString.length()-i))) {
 						continue;
@@ -27,6 +26,7 @@ public class PalindromePermutationChecker {
 
 	public static void main(String[] args) {
 
+		function1(null);
 
 	}
 
