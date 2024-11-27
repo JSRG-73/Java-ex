@@ -1,24 +1,20 @@
 package exercises;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
-
 
 public class StreamTest {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        ArrayList<String> al = new ArrayList<>();
+        al.add("USA");
+        al.add("France");
+        al.add("Mexico");
+        al.add("Mexico");
+        al.add("Mexico");
+        al.add("Morocco");
 
-		ArrayList<String> al = new ArrayList<String>();
-		al.add("USA");
-		al.add("France");
-		al.add("Mexico");
-		al.add("Mexico");
-		al.add("Mexico");
-		al.add("Morocco");
+        al.stream().distinct().forEach(System.out::println);
+    }
 
-		
-		System.out.println(al.stream().distinct());
-	}
 
 }
