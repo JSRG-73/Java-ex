@@ -15,6 +15,4 @@ public class StreamTest {
 
         al.stream().distinct().forEach(System.out::println);
     }
-
-
 }
