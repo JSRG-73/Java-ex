@@ -16,11 +16,12 @@ public class StreamTest {
 
         al.stream().distinct().forEach(System.out::println);
         
-        List<String> result = al.stream()
-        	    .filter(word -> word.startsWith("m"))
+        List<String> result = al.stream().distinct()
         	    .map(String::toUpperCase)
-        	    .sorted()
+        	    .filter(word -> word.length() > 5)
         	    .toList();
+
+        	System.out.println(result);
         
         System.out.println(result);
     }
