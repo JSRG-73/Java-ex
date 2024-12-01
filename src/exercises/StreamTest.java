@@ -21,8 +21,7 @@ public class StreamTest {
         	    .filter(word -> word.length() > 5)
         	    .toList();
 
-        	System.out.println(result);
-        
+        	System.out.println(result);        
         System.out.println(result);
     }
 }
