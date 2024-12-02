@@ -14,7 +14,7 @@ public class StreamTest {
         al.add("Mexico");
         al.add("Morocco");
 
-        al.stream().distinct().forEach(System.out::println);
+        al.stream().distinct().count();
         
         List<String> result = al.stream().distinct()
         	    .map(String::toUpperCase)
