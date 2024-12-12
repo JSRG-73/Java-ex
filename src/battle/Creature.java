@@ -3,17 +3,27 @@ package battle;
 public class Creature {
 
 	String name, type;
-	int health, attack, defense, speed;
+	int health, attack, skill, speed;
 	
 	
-	public Creature(int health, int attack, int defense, int speed, String name, String type) {
+	public Creature(String type, String name, int health, int attack, int skill, int speed) {
 		
 		this.name = name;
 		this.health = health;
 		this.attack = attack;
 		this.speed = speed;
-		this.defense = defense;
+		this.skill = skill;
 		this.type = type;
+	}
+
+
+	public int getSkill() {
+		return skill;
+	}
+
+
+	public void setSkill(int skill) {
+		this.skill = skill;
 	}
 
 
@@ -55,17 +65,6 @@ public class Creature {
 	public void setAttack(int attack) {
 		this.attack = attack;
 	}
-
-
-	public int getDefense() {
-		return defense;
-	}
-
-
-	public void setDefense(int defense) {
-		this.defense = defense;
-	}
-
 
 	public int getSpeed() {
 		return speed;
