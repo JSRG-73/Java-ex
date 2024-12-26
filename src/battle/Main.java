@@ -3,12 +3,13 @@ package battle;
 public class Main {
 	
 	public String round(Creature attacker, Creature defender) {
+		if(Main.dodge(defender)) return defender.name;
 		int randomNum = (int)(Math.random() * (attacker.skill + defender.skill));
 		if (randomNum<=attacker.skill) return attacker.name;
 		else return defender.name;
 	}
 	
-	public boolean dodge(Creature c) {
+	public static boolean dodge(Creature c) {
 		int randomNum = (int)(Math.random() * 101);
 		if (randomNum>=c.speed) return false;
 		else return true;
