@@ -23,6 +23,7 @@ public class Main {
 		Main m = new Main();
 
 		System.out.println(m.round(c1, c2));
+		System.out.println(m.dodge(c2));
 
 	}
 
