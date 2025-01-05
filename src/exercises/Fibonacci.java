@@ -1,6 +1,6 @@
 package exercises;
 
-//Simple fibonacci practice
+//Simple Fibonacci practice
 
 public class Fibonacci {
 

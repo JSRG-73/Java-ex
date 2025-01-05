@@ -14,6 +14,7 @@ public class RockPaperScissors {
 		int randomNum = (int)(Math.random() * 3);
 		String computer_choice = String.valueOf(randomNum);
 		String Splayer, Cplayer;
+		
 		//System.out.println(computer_choice);
 		switch (player_choice) {
 		case "0": {
@@ -72,12 +73,17 @@ public class RockPaperScissors {
 	public static void main(String[] args) {
 		
 		Scanner in = new Scanner(System.in);
+		int exit;
 		
 		while(true) {
 			System.out.println("\n\n\nWelcome to rock, paper, Scissors\nType your choice:\n0-Rock\n1-Paper\n2-Scissors\n\nYour choice: ");
 			
 			System.out.println(game(in.next()));
 			//clearScreen();
+			System.out.println("\nPress 1 to play again, press 2 to exit: ");
+			exit = in.nextInt();
+			if(exit==1)clearScreen();
+			else break;
 		}
 
 	}
