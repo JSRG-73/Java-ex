@@ -35,6 +35,9 @@ public class CompoundInterestCalculator {
 
             System.out.println("\nPress 1 to calculate again, press 2 to exit: ");
             exit = in.nextInt();
+            if(exit==1)for (int i = 0; i < 50; i++) {
+                System.out.println(); 
+            }
             if (exit != 1) break;
         }
 
