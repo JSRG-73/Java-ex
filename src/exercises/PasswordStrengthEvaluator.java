@@ -7,6 +7,10 @@ public class PasswordStrengthEvaluator {
 	public static String evaluator(String ps) {
 		
 		int counter = 0;
+		String specialChars = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+		boolean uppercase=false;
+		boolean number = false;
+		boolean special_symbol=false;
 		
 		//Evaluating emptiness
 		if(ps.isEmpty())return "Your password is empty!";
@@ -15,8 +19,20 @@ public class PasswordStrengthEvaluator {
 		if(ps.length()<5) counter=0;
 		else if (ps.length()<8)counter++;
 		else counter+=2;
+
 		
+		for (int i=0;i<ps.length();i++) {
+			if(Character.isUpperCase(ps.charAt(i)))uppercase = true;
+			if(Character.isDigit(ps.charAt(i)))number = true;
+			if (specialChars.indexOf(ps.charAt(i)) != -1)special_symbol = true;
+		}
+		if(uppercase)counter++;
+		if(number)counter++;
+		if(special_symbol)counter++;
 		
+		if(counter <2)return("Your password is too weak!");
+		if(counter <5)return("Your password is secure enough");
+		else return "Your password is very strong!";
 	}
 
 	public static void main(String[] args) {
