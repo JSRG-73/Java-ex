@@ -27,8 +27,11 @@ public class PasswordStrengthEvaluator {
 			if (specialChars.indexOf(ps.charAt(i)) != -1)special_symbol = true;
 		}
 		if(uppercase)counter++;
+		else System.out.println("Add at least one uppercase letter.");
 		if(number)counter++;
+		else System.out.println("Include a special character for added security.");
 		if(special_symbol)counter++;
+		else System.out.println("Increase your password length.");		
 		
 		if(counter <2)return("Your password is too weak!");
 		if(counter <5)return("Your password is secure enough");
