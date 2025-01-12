@@ -68,7 +68,7 @@ public class PasswordStrengthEvaluator {
 	public static void main(String[] args) {
 
 		Scanner in = new Scanner(System.in);
-		System.out.println("Please enter a password to check its strenght\nPassword: ");
+		System.out.println("Please enter a password to check its strength\nPassword: ");
 		String ps = in.next();
 		
 		System.out.println(evaluator(ps));
