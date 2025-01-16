@@ -5,8 +5,15 @@ import java.util.Scanner;
 public class RomanNumeral {
 	
 	public static String toRoman(int n) {
+		String s="";
 		if(n<4000 && n>0) {
-			
+			while(true) {
+				if(n>=1000) {
+					s+="M";
+					n-=1000;
+				} else break;
+			}
+			return s;
 		}else return "Please enter a number between 1-3999";
 	}
 
