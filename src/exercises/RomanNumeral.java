@@ -4,15 +4,10 @@ import java.util.Scanner;
 
 public class RomanNumeral {
 	
-	public static String toRoman(int n) {
+	public static String toRoman(String n) {
 		String s="";
-		if(n<4000 && n>0) {
-			while(true) {
-				if(n>=1000) {
-					s+="M";
-					n-=1000;
-				} else break;
-			}
+		if(Integer.parseInt(n)<4000 && Integer.parseInt(n)>0) {
+			
 			return s;
 		}else return "Please enter a number between 1-3999";
 	}
@@ -26,7 +21,7 @@ public class RomanNumeral {
 		
 		try {
 			int n = Integer.parseInt(number); 
-			System.out.println(toRoman(n));
+			System.out.println(toRoman(number));
 			
 		}catch (NumberFormatException e) {
 			System.out.println("That's not a valid number.");
