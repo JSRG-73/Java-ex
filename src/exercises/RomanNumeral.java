@@ -5,10 +5,20 @@ import java.util.Scanner;
 public class RomanNumeral {
 	
 	public static String toRoman(String n) {
-		String s="";
+		
 		if(Integer.parseInt(n)<4000 && Integer.parseInt(n)>0) {
-			
-			return s;
+			String[] Symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+		    int[] Values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+
+		    int number=Integer.parseInt(n);
+		    StringBuilder s = new StringBuilder();
+		    for (int i = 0; i < Values.length; i++) {
+		        while (number >= Values[i]) {
+		            s.append(Symbols[i]);
+		            number -= Values[i];
+		        }
+		    }
+		    return s.toString();
 		}else return "Please enter a number between 1-3999";
 	}
 
