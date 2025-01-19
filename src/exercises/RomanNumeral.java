@@ -21,6 +21,14 @@ public class RomanNumeral {
 		    return s.toString();
 		}else return "Please enter a number between 1-3999";
 	}
+	
+	public static String toNumeral(String r) {
+	    
+	    for (int i=1;i<4000;i++) {
+	    	if(r.equals(toRoman(String.valueOf(i))))return String.valueOf(i);
+	    }
+	    return r+" is not a valid number.";
+	}
 
 	public static void main(String[] args) {
 
@@ -30,8 +38,9 @@ public class RomanNumeral {
 		String number = in.next();
 		
 		try {
-			int n = Integer.parseInt(number); 
-			System.out.println(toRoman(number));
+			//int n = Integer.parseInt(number); 
+			//System.out.println(toRoman(number));
+			System.out.println(toNumeral(number));
 			
 		}catch (NumberFormatException e) {
 			System.out.println("That's not a valid number.");
