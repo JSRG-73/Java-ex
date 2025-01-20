@@ -43,7 +43,7 @@ public class RomanNumeral {
 			System.out.println(toNumeral(number));
 			
 		}catch (NumberFormatException e) {
-			System.out.println("That's not a valid number.");
+			//System.out.println("That's not a valid number.");
 		}
 		
 		//if(Character.isDigit(number.charAt(0)))
