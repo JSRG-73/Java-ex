@@ -37,14 +37,17 @@ public class RomanNumeral {
 		System.out.println("Hello!\n\nEnter either a roman number or a normal number and I'll convert it!(From 1 to 3999)\nYour number: ");
 		String number = in.next();
 		
-		try {
-			//int n = Integer.parseInt(number); 
-			//System.out.println(toRoman(number));
-			System.out.println(toNumeral(number));
-			
-		}catch (NumberFormatException e) {
-			//System.out.println("That's not a valid number.");
-		}
+		
+		  try {
+	            int n = Integer.parseInt(number);
+	            if (n < 1 || n > 3999) {
+	                System.out.println("Please enter a number between 1 and 3999");
+	            } else {
+	                System.out.println("Roman numeral: " + toRoman(number));
+	            }
+	        } catch (NumberFormatException e) {
+	            System.out.println("Integer value: " + toNumeral(number.toUpperCase()));
+	        }
 		
 		//if(Character.isDigit(number.charAt(0)))
 
