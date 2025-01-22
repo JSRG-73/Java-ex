@@ -49,8 +49,6 @@ public class RomanNumeral {
 	            System.out.println("Integer value: " + toNumeral(number.toUpperCase()));
 	        }
 		
-		//if(Character.isDigit(number.charAt(0)))
-
 	}
 
 }
