@@ -67,7 +67,7 @@ public class NumberSpiral {
 		while (true) {
 			try {
 				n = in.nextInt();
-				if(n>0 && n<21)break;
+				if(n>0 && n<21) break;
 				else System.out.print("Your number is out of range, please enter a number between 1 and 20: ");
 				
 			} catch (Exception e) {
