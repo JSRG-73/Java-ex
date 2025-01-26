@@ -4,6 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ShortestPath {
+	
+	public static void find(String s) {
+		
+	}
 
 	public static void main(String[] args) {
 
