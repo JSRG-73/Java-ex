@@ -6,6 +6,10 @@ public class LongestUniqueSubstring {
 		
 		String longest="";
 		
+		for(int i=0;i<s.length();i++) {
+			
+		}
+		
 		return longest;
 	}
 
@@ -14,7 +18,6 @@ public class LongestUniqueSubstring {
 		String s = "abcabcbb";
 		
 		System.out.println(check(s));
-		
 		
 	}
 
