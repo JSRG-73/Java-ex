@@ -4,7 +4,11 @@ public class SmallestWindow {
 	
 	public String find(String s, String t, int window) {
 		
+		String aux ="";
 		
+		for(int i=0;i<=s.length()-window;i++) {
+			aux=s.substring(i,i+window);
+		}
 		
 		return "";
 	}
@@ -21,6 +25,8 @@ public class SmallestWindow {
 				break;
 			}
 		}
+		
+		//sw.find(s, t, 3);
 	}
 
 }
