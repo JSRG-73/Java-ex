@@ -5,9 +5,18 @@ public class SmallestWindow {
 	public String find(String s, String t, int window) {
 		
 		String aux ="";
+		boolean flag=false;
+		
+		if(s.length()==t.length()) return s;
+		if(s.length()<t.length()) return aux;
 		
 		for(int i=0;i<=s.length()-window;i++) {
 			aux=s.substring(i,i+window);
+			flag=true;
+			for(char c : t.toCharArray()) {
+			    if(aux.indexOf(c)==-1)flag=false;
+			}
+			if(flag)return aux;
 		}
 		
 		return "";
@@ -15,7 +24,7 @@ public class SmallestWindow {
 
 	public static void main(String[] args) {
 		
-		String s = "ADOBECODEBANC", t = "ABC";
+		String s = "ZZZZAYYBZZZCZZ", t = "ABC";
 		
 		SmallestWindow sw = new SmallestWindow();
 		
@@ -25,8 +34,5 @@ public class SmallestWindow {
 				break;
 			}
 		}
-		
-		//sw.find(s, t, 3);
 	}
-
 }
